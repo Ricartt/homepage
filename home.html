@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD+Guides&display=swap" rel="stylesheet" />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Imperial+Script&family=Rochester&display=swap");
+
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Imperial+Script&family=Rochester&display=swap');
+
+        :root {
+            font-family: Arial, sans-serif;
+            margin: 5em auto 2em;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #aba2a2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: #e93d3d;
+            position: relative;
+            margin: 10px auto 50px;
+            transform: rotate(-45deg);
+            animation: beat 1s infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background-color: #e93d3d;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart:before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 50px;
+            top: 10;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .imperial-script-regular {
+            font-family: "Imperial Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .imperial-script-regular {
+            font-family: "Imperial Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        header h3 {
+            font-family: "Imperial Script", cursive;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #ffffff;
+            font-style: normal;
+        }
+
+        header h1 {
+            font-family: "Imperial Script", variable;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #ffffff;
+            font-style: normal;
+        }
+
+        /* Adicionando o estilo para o iframe */
+        .video-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 16px;
+        }
+
+        .container2 {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 100px 0;
+        }
+
+        .card {
+            background-color: #f7f7f7;
+            border-radius: 16px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin: 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card-content h3 {
+            color: #1a1a1a;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .card {
+                width: 45%;
+            }
+
+            .card-content h3 {
+                font-size: 1rem;
+            }
+
+            .card-content p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 90%;
+            }
+
+            .card-content h3 {
+                font-size: 1rem;
+            }
+
+            .card-content p {
+                font-size: 0.8rem;
+            }
+        }
+
+        .next-btn {
+            width: 50px;
+            margin: 60px auto;
+            background-color: #760d0d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .next-btn:hover {
+            background-color: #830515;
+        }
+
+        footer {
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        #contador {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>Vitória & Larissa</h3>
+        <div class="heart"></div>
+        <h1>Alguns dos nossos momentos</h1>
+
+        <!-- Janela do vídeo do YouTube -->
+
+        <div class="container2">
+            <!-- Cards com imagens e corações -->
+            <div class="card">
+                <img src="imagem1.JPG" alt="Foto 1" />
+                <div class="card-content">
+                    <h3>02/12/24<h3>
+                            <p>❤️</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <img src="imagem4.jpeg" alt="Foto 4" />
+                <div class="card-content">
+                    <h3>22/12/24</h3>
+                    <p>❤️</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagem10.jpeg" alt="Foto 3" />
+                <div class="card-content">
+                    <h3>01/01/25</h3>
+                    <p>❤️</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="imagem6.jpeg" alt="Foto 5" />
+                <div class="card-content">
+                    <h3>28/01/25</h3>
+                    <p>❤️</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagem11.jpeg" alt="Foto 1" />
+                <div class="card-content">
+                    <h3>01/02/25<h3>
+                            <p>❤️</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="imagem12.jpeg" alt="Foto 2" />
+                <div class="card-content">
+                    <h3>09/12/24</h3>
+                    <p>❤️</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="imagem7.jpeg" alt="Foto 6" />
+                <div class="card-content">
+                    <h3>20/02/25</h3>
+                    <p>❤️</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img src="imagem8.jpeg" alt="Foto 6" />
+                <div class="card-content">
+                    <h3>08/03/25</h3>
+                    <p>❤️</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <h1></h1>
+        <p>Eu te amo há:</p>
+        <div id="contador"></div>
+
+        <script>
+            function atualizarContagem() {
+                
+                const dataInicio = new Date("2024-11-23");
+
+                const dataAtual = new Date();
+
+                const diferenca = dataAtual - dataInicio;
+
+
+                let meses = (dataAtual.getFullYear() - dataInicio.getFullYear()) * 12;
+                meses -= dataInicio.getMonth();
+                meses += dataAtual.getMonth();
+                if (dataAtual.getDate() < dataInicio.getDate()) {
+                    meses--;
+                }
+
+
+                const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+
+
+                const horas = Math.floor(
+                    (diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+                );
+
+                const minutos = Math.floor(
+                    (diferenca % (1000 * 60 * 60)) / (1000 * 60)
+                );
+
+
+                const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+                document.getElementById(
+                    "contador"
+                ).textContent = `${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+            }
+
+            setInterval(atualizarContagem, 1000);
+        </script>
+    </header>
+
+    <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MuY7MGWOsps?si=4Dp0TXy0PdWInI17" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+
+    <div style="text-align: center">
+        <a href="carta/index.html" class="next-btn" style="text-decoration: none">
+            ➝
+        </a>
+    </div>
+
+    <footer>Dev.Ricarte | 2025</footer>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+    <body> 
+        
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Meu Bem. </strong>
+                        <p>É impressão minha
+                            Ou o Sol brilhou mais forte quando olhou pra mim?
+                            O brilho desceu das estrelas e no meu olhar ficou até o fim
+                            É impressão minha ou metade do meu peito mora em você?
+                            Se o mal chegar, entro na frente pra te proteger
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <a class="next-btn2"href="page.html" class="next-btn" style="text-decoration:none">
+        Não
+    </a>
+
+    <script>
+        document.querySelector('.next-btn').addEventListener('click', function() {
+    window.location.href = 'https://restaurantemahai.com.br/'; // Substitua pelo link de destino
+});
+
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+    </script>
+</body>
+</html>
