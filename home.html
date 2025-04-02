@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<!-- Aréa head -->
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD+Guides&display=swap" rel="stylesheet" />
 
+    <!-- Style -->
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Imperial+Script&family=Rochester&display=swap");
-
         @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Imperial+Script&family=Rochester&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Imperial+Script&family=Ole&family=Rochester&display=swap');
 
         :root {
             font-family: Arial, sans-serif;
@@ -74,21 +77,32 @@
             font-style: normal;
         }
 
+        .rochester-regular {
+            font-family: "Rochester", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
 
         header h3 {
             font-family: "Imperial Script", cursive;
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             font-weight: 400;
             color: #ffffff;
             font-style: normal;
         }
 
         header h1 {
-            font-family: "Imperial Script", variable;
-            font-size: 2.5rem;
+            font-family: "Rochester", cursive;
+            font-size: 2.3rem;
             font-weight: 400;
-            color: #ffffff;
+            color: #ffffffcc;
             font-style: normal;
+        }
+
+        p{
+            font-family: "Rochester", cursive;
+
         }
 
         /* Adicionando o estilo para o iframe */
@@ -211,8 +225,11 @@
             font-weight: bold;
             color: white;
         }
+
     </style>
 </head>
+
+<!-- Início da área body -->
 
 <body>
     <header>
@@ -220,19 +237,18 @@
         <div class="heart"></div>
         <h1>Alguns dos nossos momentos</h1>
 
-        <!-- Janela do vídeo do YouTube -->
-
+        <!--Div containers e cards -->
         <div class="container2">
             <!-- Cards com imagens e corações -->
+
             <div class="card">
                 <img src="imagem1.JPG" alt="Foto 1" />
                 <div class="card-content">
                     <h3>02/12/24<h3>
+                        <p>"Seus olhos castanhos são capazes de iluminar uma cidade"</p>
                             <p>❤️</p>
                 </div>
             </div>
-
-
 
 
             <div class="card">
@@ -258,6 +274,8 @@
                     <p>❤️</p>
                 </div>
             </div>
+
+
             <div class="card">
                 <img src="imagem11.jpeg" alt="Foto 1" />
                 <div class="card-content">
@@ -274,6 +292,7 @@
                     <p>❤️</p>
                 </div>
             </div>
+
 
             <div class="card">
                 <img src="imagem7.jpeg" alt="Foto 6" />
@@ -299,9 +318,21 @@
         <p>Eu te amo há:</p>
         <div id="contador"></div>
 
+          <!-- Barra de navegação flutuante -->
+    <div class="floating-text-box">
+        <h1>Texto da Área Flutuante</h1>
+        <p> De algum modo, minha alma conhecia a sua alma antes que tivéssemos tido a chance de nos encontrar.
+            <br> Foi como voltar para casa depois de um dia muito, muito longo.
+        </p>
+        <p>Dizem que a pessoa certa só vem quando não estamos esperando e não ter buscado trouxe até mim a pessoa que eu sonhava
+            Eu não esperava nada do mundo, e ele me deu tudo ao te colocar na minha vida ♡
+        </p>
+    </div>
+
+        <!-- Script Contagem -->
         <script>
             function atualizarContagem() {
-                
+
                 const dataInicio = new Date("2024-11-23");
 
                 const dataAtual = new Date();
@@ -338,20 +369,25 @@
 
             setInterval(atualizarContagem, 1000);
         </script>
+
     </header>
 
+    <!-- Div video  -->
     <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/JwNmNoWrz70?si=nDt_9JD0WY3-Qdz_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://youtu.be/JwNmNoWrz70?si=GzvIJ_BXnkndEIEx"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    
 
+    <!-- Div conteúdo carta -->
     <div style="text-align: center">
         <a href="carta/index.html" class="next-btn" style="text-decoration: none">
             ➝
         </a>
     </div>
 
-    <footer>Dev.Ricarte | 2025</footer>
+    <footer>Dev.Ricartt | 2025</footer>
 </body>
 
 </html>
